@@ -1,0 +1,65 @@
+/* components/ShurikenButton.css */
+.shuriken-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.shuriken-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shuriken {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  transform: rotate(45deg);
+  animation: shurikenAnim 0.8s forwards;
+  opacity: 0;
+}
+
+/* Corner positions */
+.shuriken.top-left {
+  top: 0;
+  left: 0;
+  animation-delay: 0s;
+}
+.shuriken.top-right {
+  top: 0;
+  right: 0;
+  animation-delay: 0.1s;
+}
+.shuriken.bottom-left {
+  bottom: 0;
+  left: 0;
+  animation-delay: 0.2s;
+}
+.shuriken.bottom-right {
+  bottom: 0;
+  right: 0;
+  animation-delay: 0.3s;
+}
+
+/* Shuriken animation */
+@keyframes shurikenAnim {
+  0% {
+    transform: rotate(45deg) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(45deg) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+  }
+}
